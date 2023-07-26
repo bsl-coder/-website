@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+  /* background: rgb(223, 217, 217); */
+  display: flex;
+  justify-content: center;
+
+  --s: 100px; /* control the size */
+  --c1: #030302;
+  --c2: rgb(252, 246, 246);
+
+  --_s: calc(2 * var(--s)) calc(2 * var(--s));
+  --_g: var(--_s) conic-gradient(at 40% 40%, #0000 75%, var(--c1) 0);
+  --_p: var(--_s) conic-gradient(at 20% 20%, #0000 75%, var(--c2) 0);
+  background: calc(0.9 * var(--s)) calc(0.9 * var(--s)) / var(--_p),
+    calc(-0.1 * var(--s)) calc(-0.1 * var(--s)) / var(--_p),
+    calc(0.7 * var(--s)) calc(0.7 * var(--s)) / var(--_g),
+    calc(-0.3 * var(--s)) calc(-0.3 * var(--s)) / var(--_g),
+    conic-gradient(from 90deg at 20% 20%, var(--c2) 25%, var(--c1) 0) 0 0 /
+      var(--s) var(--s);
+  animation: m 3s infinite;
+}
+@keyframes m {
+  0% {
+    background-position: calc(0.9 * var(--s)) calc(0.9 * var(--s)),
+      calc(-0.1 * var(--s)) calc(-0.1 * var(--s)),
+      calc(0.7 * var(--s)) calc(0.7 * var(--s)),
+      calc(-0.3 * var(--s)) calc(-0.3 * var(--s)), 0 0;
+  }
+  25% {
+    background-position: calc(1.9 * var(--s)) calc(0.9 * var(--s)),
+      calc(-1.1 * var(--s)) calc(-0.1 * var(--s)),
+      calc(1.7 * var(--s)) calc(0.7 * var(--s)),
+      calc(-1.3 * var(--s)) calc(-0.3 * var(--s)), 0 0;
+  }
+  50% {
+    background-position: calc(1.9 * var(--s)) calc(-0.1 * var(--s)),
+      calc(-1.1 * var(--s)) calc(0.9 * var(--s)),
+      calc(1.7 * var(--s)) calc(-0.3 * var(--s)),
+      calc(-1.3 * var(--s)) calc(0.7 * var(--s)), 0 0;
+  }
+  75% {
+    background-position: calc(2.9 * var(--s)) calc(-0.1 * var(--s)),
+      calc(-2.1 * var(--s)) calc(0.9 * var(--s)),
+      calc(2.7 * var(--s)) calc(-0.3 * var(--s)),
+      calc(-2.3 * var(--s)) calc(0.7 * var(--s)), 0 0;
+  }
+  100% {
+    background-position: calc(2.9 * var(--s)) calc(-1.1 * var(--s)),
+      calc(-2.1 * var(--s)) calc(1.9 * var(--s)),
+      calc(2.7 * var(--s)) calc(-1.3 * var(--s)),
+      calc(-2.3 * var(--s)) calc(1.7 * var(--s)), 0 0;
+  }
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 500px;
+  margin-top: 50px;
+  /* background: white; */
+  border-radius: 15px;
+  box-shadow: 10px 10px 50px 0px black;
+}
+
+.login-section {
+  background: #fffcfc;
+  width: 400px;
+  height: 500px;
+  padding: 50px;
+  text-align: center;
+  border-radius: 15px 0 0 15px;
+}
+
+.login-section p {
+  padding-top: 25px;
+  font-size: 20px;
+}
+
+.login-section h2 {
+  font-size: 40px;
+  padding-bottom: 25px;
+  font-weight: 800;
+}
+
+.text-section {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    -45deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  width: 400px;
+  height: 500px;
+  border-radius: 0 15px 15px 0;
+  text-align: center;
+  padding-top: 150px;
+  color: white;
+  font-weight: 400;
+  /* text-shadow: 1px 1px 1px gray; */
+}
+
+.text-section p {
+  padding: 25px 30px;
+  font-size: 20px;
+}
+
+.text-section h2 {
+  font-size: 40px;
+}
+
+.sm-logo i {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.login-info:first-child {
+  color: #3b3a3a;
+  padding-bottom: 25px;
+}
+
+.login-info .inp {
+  width: 300px;
+  height: 45px;
+  background: rgb(231, 225, 225);
+  border: none;
+  padding-left: 15px;
+  font-size: 18px;
+  border-radius: 5px;
+  color: #504e4e;
+}
+
+.login-info .e {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  width: 150px;
+  height: 45px;
+  background: rgba(253, 29, 29, 1) 50%;
+  background: linear-gradient(
+    -45deg,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  border-radius: 30px;
+  color: #ffffff;
+  cursor: grab;
+}
+
+.btn:hover {
+  background: rgb(110, 51, 150);
+  transition: 0.5s ease-in-out;
+}
+
+.fb img {
+  position: absolute;
+  top: 123px;
+  left: 300px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-45deg);
+  transition: 10s ease-in-out;
+}
